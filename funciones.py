@@ -23,4 +23,10 @@ ventas1…), no se permite el uso de listas, diccionarios ni ninguna estructura 
 colección.
 • El sistema debe utilizar un menú principal controlado con un ciclo while, que se
 repite hasta que el usuario decida salir.
-• Deben usarse condicionales para validar la opción ingresada y prevenir errores.'''
+• Deben usarse condicionales para validar la opción ingresada y prevenir errores.''' 
+
+a = 8
+b = 9
+c = a + b
+print(c)    
+    
