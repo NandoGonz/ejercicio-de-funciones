@@ -25,8 +25,3 @@ colección.
 repite hasta que el usuario decida salir.
 • Deben usarse condicionales para validar la opción ingresada y prevenir errores.''' 
 
-a = 8
-b = 9
-c = a + b
-print(c)    
-    
