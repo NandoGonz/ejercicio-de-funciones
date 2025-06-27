@@ -33,7 +33,9 @@ def verProductos():
     print(f"3. {p3} --> ${precio3}")
 
 def venderProducto():
-    global ingreso1, ingreso2, ingreso3 # usamos el elemento global para llamar las variables universales y poder usarlas
+
+# usamos el elemento global para llamar las variables universales y poder usarlas    
+    global ingreso1, ingreso2, ingreso3 
     verProductos()
     opcion = int(input("selecione el numero del producto a vender: "))
     
