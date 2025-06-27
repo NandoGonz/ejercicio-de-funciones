@@ -24,7 +24,7 @@ colección.
 • El sistema debe utilizar un menú principal controlado con un ciclo while, que se
 repite hasta que el usuario decida salir.
 • Deben usarse condicionales para validar la opción ingresada y prevenir errores.''' 
-
+# creramos las variables a usar, las variables vacias las usaremos para ir sumando lo que nos indican las mismas
 programa_1 = "Java de Cero a Senior"
 estudiantes_matriculados_programa_1 = 0 
 ventas_programa_1 = 0
@@ -45,7 +45,7 @@ descuento = precio_de_los_programas * 0.90
 total_a_pagar = precio_de_los_programas - descuento
 
 
-
+# creamos la funcion menu para visualizar los programas, costo y descuento disponible
 def mostrar_menu():
     print("\n Menu de ventas")
     print("1. Programas disponibles")
@@ -60,10 +60,13 @@ def programas_disponibles():
     print(f"2. el programa {programa_2} tiene un valor de ${precio_de_los_programas} cuenta con un  descuento de ${descuento} total a pagar es de ${total_a_pagar} ")    
     print(f"3. el programa {programa_3} tiene un valor de ${precio_de_los_programas} cuenta con un  descuento de ${descuento} total a pagar es de ${total_a_pagar} ")    
     
+# creamos la funcion venta para registrar las ventas y la cantidad de alumnos registrados     
 def realizar_venta():
     global ventas_programa_1, ventas_programa_2, ventas_programa_3, estudiantes_matriculados_programa_1, estudiantes_matriculados_programa_2, estudiantes_matriculados_programa_3
     programas_disponibles()
     opcion = int(input("ingrese una opcion: "))
+    
+# usamos codiconales y la variable opcion, para registrar de forma individual a los alumnos y su respectivo programa    
     if opcion == 1:    
         estudiantes_a_matricular = int(input(f"ingrese la cantidad de alumnos que desean acceder al programa {programa_1}: "))
         estudiantes_matriculados_programa_1 += estudiantes_a_matricular
@@ -82,7 +85,7 @@ def realizar_venta():
     else:
         print("aun no se a realizado ninguna venta")    
         
-        
+# con la funcion ver ingresos por programa visualizamos de manera individual los ingresos de cada programa y usamos un condional para seleccionar de forma individual        
 def ver_ingreso_por_programa():
     print("\n igresos por programa")
     print("1. ver los ingresos del programa de Java De Cero a Senior")        
@@ -95,13 +98,14 @@ def ver_ingreso_por_programa():
         print(f"los ingresos totales del programa de Python Con IA son ${ventas_programa_2}")   
     elif opcion == 3:
         print(f"los ingresos totales del programa de Mobile Senior con IA son ${ventas_programa_3}  ")
-    
+
+# con la funcion ingresos totales calculamos el total recaudado por todos los cursos, teniendo en cuenta la cantidad de alumnos    
 def ingresos_totales_del_dia():
     ventas_totales = ventas_programa_1 + ventas_programa_2 + ventas_programa_3
     print(f"los ingresos totales son ${ventas_totales} ") 
             
         
-        
+# usamos el ciclo while para crear un menu donde llamamos a todas las funciones, el while nos ayuda a iterar hasta que deseemos salir del ciclo        
 while True:
     mostrar_menu()
     opcion = int(input("ingrese una opcion: "))    
